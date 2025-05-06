@@ -13,8 +13,11 @@ export default class RegistrationController {
       password: hashedPassword,
     })
 
+    const token = await User.accessTokens.create(user)
+
     return response.json({
-      password: user.password,
+      user,
+      token,
     })
   }
 }
