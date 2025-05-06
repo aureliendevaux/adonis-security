@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3333/tasks/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 2
+}
+
+headers {
+  Authorization: Bearer oat_MQ.aXFFUU4yTjhiVVA4X0IxUExSNUR4MUZwM0dIRTFwdUd5dEItY1daODM4NzAyOTE3ODQ
+}
+
+body:json {
+  {
+    "name": "ma tache 1 modifiée"
+  }
+}

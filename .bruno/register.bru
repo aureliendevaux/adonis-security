@@ -1,0 +1,19 @@
+meta {
+  name: register
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3333/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "coucou2@email.fr",
+    "password": "secure",
+    "fullName": "Jane Smith"
+  }
+}
